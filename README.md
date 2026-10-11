@@ -30,7 +30,7 @@ J'ai également diagnostiqué et corrigé un problème de compatibilité de Loki
 
 ## Tests de sécurité
 Je réalise aussi des tests de pénétration à différentes échelle contre mon laboratoire afin de mieux comprendre les mécanismes de protection et leurs limites, ainsi que de tester la sécurité de mes installations. J'effectue différents types d'attaques comme de l'analyse réseau (à l'aide de wireshark). J'étudie la vulnérabilité des différents système connecté et je réalise aussi des captures de handshake wifi (échange d'authentification Wi-Fi en utilisant le monitor mode de mon antenne wifi.
-Les tests sont réalisés dans un environnement sécurisé où j'en suis propriétaire.
+Les tests sont réalisés sur mon propre laboratoire, dans un environnement que je contrôle.
 
 ## Évolutions prévues
 -	Ajouter la supervision des ressources système d'OPNsense et du Raspberry Pi : processeur, mémoire, stockage, température et interfaces réseau.
