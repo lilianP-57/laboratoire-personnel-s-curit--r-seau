@@ -19,7 +19,7 @@ L’infrastructure du lab est constituée des équipements et solutions suivants
 - Étude de la segmentation réseau et de l'isolation des équipements grâce à une DMZ.
 ### Centralisation et analyse des journaux
 J'ai mis en place une chaîne de centralisation des journaux d'OPNsense vers un Raspberry Pi :
-## OPNsense -> Syslog -> Promtail -> Loki -> Grafana
+# OPNsense -> Syslog -> Promtail -> Loki -> Grafana
 Le tableau de bord Grafana permet de visualiser :
 -	Le volume des logs et son évolution.
 -	Les événements détectés comme des erreurs.
