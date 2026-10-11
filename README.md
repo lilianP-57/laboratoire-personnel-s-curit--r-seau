@@ -10,7 +10,7 @@ L’infrastructure du lab est constituée des équipements et solutions suivants
 -	Promtail : collecte et transmission des journaux.
 -	Loki : stockage et interrogation des journaux.
 -	Grafana : organiser visuellement les logs sur un tableau de bord.
--	
+
 ## Mise en œuvre de l'architecture réseau et des services de sécurité
 ### Administration réseau et sécurisation des équipements
 - Configuration et administration d'OPNsense.
