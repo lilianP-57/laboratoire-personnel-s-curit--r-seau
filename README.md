@@ -10,6 +10,7 @@ L’infrastructure du lab est constituée des équipements et solutions suivants
 -	Promtail : collecte et transmission des journaux.
 -	Loki : stockage et interrogation des journaux.
 -	Grafana : organiser visuellement les logs sur un tableau de bord.
+-	Switch TP-Link TL-SG108E : Segmentation réseau avec VLAN en suivant le standard IEEE 802.1Q
 
 ## Mise en œuvre de l'architecture réseau et des services de sécurité
 ### Administration réseau et sécurisation des équipements
@@ -17,6 +18,10 @@ L’infrastructure du lab est constituée des équipements et solutions suivants
 - Mise en place d'un tunnel VPN chiffré via WireGuard.
 - Configuration de règles de filtrage réseau.
 - Étude de la segmentation réseau et de l'isolation des équipements grâce à une DMZ.
+
+### Segmentation réseau et VLAN
+Pour ce faire, j'ai utilisé OPNsense et un switch TP-Link TL-SG108E pour segmenter le réseau en 7 VLAN : LAN, LAB10, DIRECTION, ADMIN, Production, Finance et IoT. Chaque VLAN dispose de son propre sous-réseau IP afin de séparer les différents services et de contrôler les communications entre eux grâce aux règles de pare-feu. Le port 2 du switch est configuré en trunk 802.1Q vers OPNsense (igc0), tandis que les ports 3 à 8 sont associés aux VLAN correspondants. Des règles de pare-feu contrôlent les communications entre les réseaux et limitent l'accès aux réseaux privés. J'ai aussi configuré le port 1 en non tagué afin de pouvoir garder un accès au switch si un problème sur les VLAN venait à se produire.
+
 ### Centralisation et analyse des journaux
 J'ai mis en place une chaîne de centralisation des journaux d'OPNsense vers un Raspberry Pi :
 # OPNsense -> Syslog -> Promtail -> Loki -> Grafana
